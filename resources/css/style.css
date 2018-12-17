@@ -177,14 +177,33 @@ nav a{
 .location-hours{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   flex-direction: row;
   align-content: center;
 
 }
 
-.location-hours p{
+.location-hours.titles p{
   align-content: center;
-  text-align: center;
+  text-align: left;
+  background-color: black;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  color: white;
+  width: 35%;
+}
+
+.location-hours.values p{
+  align-content:flex-start;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: .1rem;
+  padding-bottom: 1rem;
+  margin-right: 2rem;
+  width: 35%;
+
 }
