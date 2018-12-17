@@ -41,11 +41,11 @@ html{
 .main-banner-text{
   background-color: black;
   color: white;
-  width: 20rem;
+  width: 20rem;   /* from redline spec */
   margin-top: 9rem;
   margin-left: 11rem;
-  padding-top: 2rem;
-  padding-left: 3rem;
+  padding-top: 2rem;  /* from Redline spec */
+  padding-left: 3rem;  /* from Redline spec */
   padding-bottom: 2rem;
 }
 
@@ -54,7 +54,8 @@ html{
   font-size: 1rem;
   background-color: black;
   color: white;
-  padding-bottom: .25rem;
+  letter-spacing: .1rem;
+  padding-bottom: .25rem;  /* from Redline spec */
 }
 
 .main-banner-text h1{
@@ -62,4 +63,33 @@ html{
   color: white;
   font-size: 2rem;
   font-weight: bold;
+}
+nav {
+  width: 100%;
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: firebrick;
+  color: white;
+}
+
+nav span{
+
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-item img{
+  height: 9rem;
 }
