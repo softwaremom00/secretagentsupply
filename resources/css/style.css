@@ -6,6 +6,7 @@ html{
 .col-container{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 1360px; /* 960 is site width */
 }
 
@@ -84,12 +85,106 @@ nav a{
   text-decoration: none;
   color: white;
 }
+.content-bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1360px; /* 960 is site width */
+}
+
+.content-container{
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid green;
+  /*border: 2px solid red;*/
+}
 
 .product-grid {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-content: center;
   flex-direction: row;
+
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+
 }
 
 .product-item img{
+  margin-top: 3rem;
   height: 9rem;
+  width: auto;
+  border: 4px solid black;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.product-item-glasses{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 2px solid pink;
+
+  margin-right: 0px;
+  padding-right: 0px;
+  margin-bottom: 0;
+}
+
+.product-item-glasses img{
+  margin-top: 3rem;
+  height: 9rem;
+  width: 53%;
+  height: auto;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  border: 4px solid black;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+.product-item-glasses .product-text{
+  margin-top: 0;
+  color: white;
+  width: 81%;
+  background-color: black;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  text-align: center;
+}
+
+.product-item .product-text{
+  color: white;
+  margin-top: 0;
+  background-color: black;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  text-align: center;
+
+}
+
+.location-hours{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: row;
+  align-content: center;
+
+}
+
+.location-hours p{
+  align-content: center;
+  text-align: center;
 }
