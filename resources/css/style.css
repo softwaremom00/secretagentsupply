@@ -1,20 +1,33 @@
-html{
+html,
+body{
   font-family: Helvetica, sans-serif;
   font-size: 18px;
+  margin: 0;
+  border-color: white;
 }
 
-.col-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 1360px; /* 960 is site width */
-}
+.container{
+  max-width: 960px; /*  use 1360 ..960 is site width */
+  margin: 0 auto;
 
+
+}
+.main {
+  margin-top: 0;
+  height: 25rem;  /* from Redline spec */
+  background-image: url("../images/moto.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 1px solid black;
+}
 
 .logo{
   display: flex;
   flex-direction: row;
+  width: 100%;
   background-color: black;
+  margin-bottom: 0;
 }
 
 .logo img {
@@ -31,19 +44,14 @@ html{
   color: white;
 }
 
-.main-banner{
-  height: 25rem;
 
-  background-image: url("../images/moto.jpeg");
-  background-position: center;
-  background-size: cover;
-}
+
 
 .main-banner-text{
   background-color: black;
   color: white;
   width: 20rem;   /* from redline spec */
-  margin-top: 9rem;
+  margin-top: 5rem;
   margin-left: 11rem;
   padding-top: 2rem;  /* from Redline spec */
   padding-left: 3rem;  /* from Redline spec */
@@ -65,46 +73,46 @@ html{
   font-size: 2rem;
   font-weight: bold;
 }
-nav {
-  width: 100%;
-  display: flex;
 
-  flex-direction: row;
-  justify-content: space-around;
+
+nav{
   background-color: firebrick;
   color: white;
 }
 
-nav span{
+nav .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
-  margin-top: .75rem;
-  margin-bottom: .75rem;
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style:none;
+  margin: 0;
+  width: 960px;
+  padding-top: .75rem;
+
+}
+li {
+  display: inline-block;
 }
 
 nav a{
   text-decoration: none;
   color: white;
 }
-.content-bottom{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 1360px; /* 960 is site width */
-}
 
-.content-container{
-  width: 960px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid green;
-  /*border: 2px solid red;*/
+.small-nav li{
+  display: none;
+  padding: 0;
+  margin: 0;
 }
 
 .product-grid {
-  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -115,14 +123,12 @@ nav a{
 .product-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 
 }
 
 .product-item img{
   margin-top: 3rem;
   height: 9rem;
-  width: auto;
   border: 4px solid black;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -134,17 +140,18 @@ nav a{
   display: flex;
   flex-direction: column;
   width: 30%;
-  border: 2px solid pink;
-
+  height: auto;
   margin-right: 0px;
   padding-right: 0px;
   margin-bottom: 0;
+
 }
 
 .product-item-glasses img{
   margin-top: 3rem;
-  height: 9rem;
+  height: auto; /*9rem;*/
   width: 53%;
+  max-width: 100%;
   height: auto;
   padding-top: 4rem;
   padding-bottom: 5rem;
@@ -180,30 +187,89 @@ nav a{
   justify-content: space-between;
   align-content: center;
   flex-direction: row;
-  align-content: center;
+}
+
+.location{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
 
 }
 
-.location-hours.titles p{
-  align-content: center;
-  text-align: left;
+.title p{
   background-color: black;
   padding-left: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   color: white;
+
+}
+
+.value p{
+  margin-top: .2rem;
+}
+
+.hours{
+  display: flex;
+  flex-direction: column;
   width: 35%;
 }
 
-.location-hours.values p{
-  align-content:flex-start;
-  text-align: left;
-  padding-left: 0;
-  margin-left: 0;
-  margin-top: .1rem;
-  padding-bottom: 1rem;
-  margin-right: 2rem;
-  width: 35%;
+
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 5rem;
+  padding-left: 11rem;
+  padding-top: 2.5rem;
+}
+
+@media only screen and (max-width: 1024px){
+
+
+   nav li{
+     display: none;
+   }
+
+   .small-nav li{
+     display:inline-block;
+     padding-bottom: .75rem;
+     width: 100%;
+   }
+
+   .product-item-glasses {
+     display: none;
+   }
+
+
+  .location-hours{
+    width: 100%;
+    justify-content: space-around;
+
+  }
+
+
+}
+
+@media only screen and (max-width: 470px) {
+
+  .product-item.watch{
+    display: none;
+  }
+
+  .product-grid{
+    justify-content: center;
+  }
+
+  .location-hours{
+             flex-direction: column;
+             align-items: center;
+             width: 100%;
+  }
+
+
 
 }
