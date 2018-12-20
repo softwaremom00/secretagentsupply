@@ -236,8 +236,9 @@ footer {
 
    .small-nav li{
      display:inline-block;
+     text-align: center;
      padding-bottom: .75rem;
-     width: 100%;
+
    }
 
    .product-item-glasses {
@@ -250,11 +251,52 @@ footer {
     justify-content: space-around;
 
   }
+  footer {
+    padding-left: 0;
+  }
+  .copyright{
 
-
+    text-align:left;
+  }
 }
 
 @media only screen and (max-width: 470px) {
+
+  .main{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    height: 15rem;
+    margin-bottom:0;
+  }
+
+  .main-banner-text{
+
+    background-color: black;
+    color: white;
+    margin: 5rem 0 0 0;
+    padding-top: 0;  /* from Redline spec */
+    padding-left: 2rem;  /* from Redline spec */
+    padding-bottom: .5rem;
+  }
+
+  .main-banner-text h2{
+    font-weight: bold;
+    font-size: .77rem;
+    padding-top:1rem;
+    padding-bottom: 0;
+    margin: 0;
+
+  }
+
+  .main-banner-text h1{
+    font-size:1rem;
+    padding-top: .5rem;
+    margin: 0px;
+    padding-bottom:0;
+    }
 
   .product-item.watch{
     display: none;
@@ -262,6 +304,7 @@ footer {
 
   .product-grid{
     justify-content: center;
+  
   }
 
   .location-hours{
@@ -269,7 +312,15 @@ footer {
              align-items: center;
              width: 100%;
   }
+  footer {
+    padding-left: 0;
+    width: 100%;
+  }
 
+  footer .copyright{
+    text-align: center;
+    width: 100%;
+  }
 
 
 }
