@@ -187,6 +187,7 @@ nav a{
   justify-content: space-between;
   align-content: center;
   flex-direction: row;
+
 }
 
 .location{
@@ -229,6 +230,16 @@ footer {
 
 @media only screen and (max-width: 1024px){
 
+  .main-banner-text{
+    background-color: black;
+    color: white;
+    width: 20rem;   /* from redline spec */
+    margin-top: 5rem;
+    margin-left: 0;
+    padding-top: 2rem;  /* from Redline spec */
+    padding-left: 3rem;  /* from Redline spec */
+    padding-bottom: 2rem;
+  }
 
    nav li{
      display: none;
@@ -245,12 +256,18 @@ footer {
      display: none;
    }
 
+   .product-item {
+     width: 47%;
+     height: auto;
+   }
 
   .location-hours{
     width: 100%;
     justify-content: space-around;
 
   }
+
+
   footer {
     padding-left: 0;
   }
@@ -302,15 +319,30 @@ footer {
     display: none;
   }
 
+     .product-item {
+       width: 90%;
+       height: auto;
+     }
+
   .product-grid{
     justify-content: center;
-  
+
   }
 
   .location-hours{
              flex-direction: column;
+             justify-content: center;
              align-items: center;
-             width: 100%;
+             width:100%;
+  }
+  .location{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+  }
+  .hours{
+    width: 90%;
   }
   footer {
     padding-left: 0;
